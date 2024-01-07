@@ -7,6 +7,7 @@ pub enum MetricType {
     InnerProduct = 0,
     /// Euclidean L2-distance
     L2 = 1,
+    L1 = 2,
 }
 
 impl MetricType {
@@ -20,6 +21,7 @@ impl MetricType {
         match v {
             0 => Some(MetricType::InnerProduct),
             1 => Some(MetricType::L2),
+            2 => Some(MetricType::L1),
             _ => None,
         }
     }
